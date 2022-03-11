@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { BrowserRouter, Link, Routes, Route, Outlet } from 'react-router-dom';
-import { Video } from './Video';
+import { Video } from './video';
 
 const App = () => {
   return (
