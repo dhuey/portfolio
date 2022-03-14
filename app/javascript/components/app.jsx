@@ -7,7 +7,10 @@ const App = () => {
   return (
     <div>
       <nav>
-        <Link to="/video">Video</Link>
+        <Link className="nav-link" to="/music">music</Link>
+        <Link className="nav-link" to="/tech">tech</Link>
+        <Link className="nav-link" to="/video">video</Link>
+        <Link className="nav-link" to="/contact">contact</Link>
       </nav>
 
       <Outlet />

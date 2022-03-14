@@ -13,3 +13,42 @@
  *= require_tree .
  *= require_self
  */
+
+body {
+  background-color: #e4e4e4;
+  color: #16644E;
+}
+
+h1 {
+  font-family:  europa, sans-serif;
+  font-weight: 700;
+}
+
+h2 {
+  font-family:  europa, sans-serif;
+  font-weight: 700;
+}
+
+div, p, a {
+  font-family: europa, sans-serif;
+  font-weight: 300;
+}
+
+nav {
+  display: flex;
+}
+
+.h1-dash {
+  color: #ab6936;
+}
+
+.nav-link {
+  color: #16644E;
+  text-decoration: none;
+  padding: 2rem;
+  font-size: 20px;
+}
+
+.nav-link:hover {
+  text-decoration: underline;
+}
