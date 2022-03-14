@@ -17,6 +17,9 @@
 body {
   background-color: #e4e4e4;
   color: #16644E;
+  box-sizing: border-box;
+  margin: 0px;
+  padding: 0px;
 }
 
 h1 {
@@ -51,4 +54,8 @@ nav {
 
 .nav-link:hover {
   text-decoration: underline;
+}
+
+.nav-logo {
+  min-height: 50px;
 }

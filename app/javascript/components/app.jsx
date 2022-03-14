@@ -7,12 +7,25 @@ const App = () => {
   return (
     <div>
       <nav>
-        <Link className="nav-link" to="/music">music</Link>
-        <Link className="nav-link" to="/tech">tech</Link>
-        <Link className="nav-link" to="/video">video</Link>
-        <Link className="nav-link" to="/contact">contact</Link>
-      </nav>
+        <Link to="/">
+          <img src="/dalton-huey-logo.svg" className="nav-logo" />
+        </Link>
 
+        <div>
+          <Link className="nav-link" to="/music">music</Link>
+          <Link className="nav-link" to="/tech">tech</Link>
+          <Link className="nav-link" to="/video">video</Link>
+          <Link className="nav-link" to="/contact">contact</Link>
+        </div>
+
+        <div>
+          <a href="https://instagram.com/daltonhuey" target="_blank"><i className="fa-brands fa-instagram"></i></a>
+          <a href="https://linkedin.com/" target="_blank"><i className="fa-brands fa-linkedin"></i></a>
+          <a href="https://youtube.com/daltonhuey" target="_blank"><i className="fa-brands fa-youtube"></i></a>
+          <a href="https://github.com/dhuey" target="_blank"><i className="fa-brands fa-github"></i></a>
+          <a href="https://spotify.com/daltonhuey" target="_blank"><i className="fa-brands fa-spotify"></i></a>
+        </div>
+      </nav>
       <Outlet />
     </div>
   )
