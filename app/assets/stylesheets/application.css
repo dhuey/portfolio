@@ -39,10 +39,16 @@ div, p, a {
 
 nav {
   display: flex;
+  justify-content: space-between;
+  align-content: center;
 }
 
 .h1-dash {
   color: #ab6936;
+}
+
+.nav-collection {
+  padding-top: 2rem;
 }
 
 .nav-link {
@@ -57,5 +63,20 @@ nav {
 }
 
 .nav-logo {
-  min-height: 50px;
+  min-height: 76px;
+  padding: 1rem;
+}
+
+.icon-collection {
+  margin-right: 1rem;
+}
+
+.nav-icon {
+  color:  #16644E;
+  font-size: 20px;
+  padding: 1rem;
+}
+
+.nav-icon:hover {
+  opacity: 80%;
 }
