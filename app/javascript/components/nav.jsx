@@ -31,11 +31,11 @@ export const Nav = (props) => {
         </div>
 
         <div className={`nav-collection icon-collection ${isOpen ? "active-menu" : ""}`}>
-          <a href="https://instagram.com/daltonhuey" target="_blank" className="nav-icon" onClick={hideMenu}><i className="fa-brands fa-instagram"></i></a>
-          <a href="https://linkedin.com/" target="_blank" className="nav-icon" onClick={hideMenu}><i className="fa-brands fa-linkedin"></i></a>
-          <a href="https://youtube.com/daltonhuey" target="_blank" className="nav-icon" onClick={hideMenu}><i className="fa-brands fa-youtube"></i></a>
+          <a href="https://www.instagram.com/daltonhuey/" target="_blank" className="nav-icon" onClick={hideMenu}><i className="fa-brands fa-instagram"></i></a>
+          <a href="https://www.linkedin.com/in/dalton-huey-043294130/" target="_blank" className="nav-icon" onClick={hideMenu}><i className="fa-brands fa-linkedin"></i></a>
+          <a href="https://www.youtube.com/channel/UCKtWFt8o8FsnwBSuteChGKg" target="_blank" className="nav-icon" onClick={hideMenu}><i className="fa-brands fa-youtube"></i></a>
           <a href="https://github.com/dhuey" target="_blank" className="nav-icon" onClick={hideMenu}><i className="fa-brands fa-github"></i></a>
-          <a href="https://spotify.com/daltonhuey" target="_blank" className="nav-icon" onClick={hideMenu}><i className="fa-brands fa-spotify"></i></a>
+          <a href="https://open.spotify.com/artist/3j6ieJQL0HEzNKNGVOIOL7?si=ba1132328e2e4c98" target="_blank" className="nav-icon" onClick={hideMenu}><i className="fa-brands fa-spotify"></i></a>
         </div>
 
         <a href="#" className="menu" onClick={toggleMenu}>
