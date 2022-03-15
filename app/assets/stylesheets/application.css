@@ -104,6 +104,30 @@ nav {
   border-radius: 10px;
 }
 
+#container {
+  max-width: 1920px;
+  margin: auto;
+}
+
+.video-project-card {
+  max-width: 1200px;
+  margin: 3rem auto;
+  border: 1px solid #52785E;
+  border-radius: 8px;
+  padding: 1rem;
+  display: flex;
+}
+
+.video-details {
+  margin-left: 2rem;
+}
+
+.video-details > h2 {
+  margin-top: 0px;
+}
+
+/* SMALL SCREEN CHANGES (875PX IS ABOUT WHERE THE CURRENT NAV STARTS TO BREAK) */
+
 @media (max-width: 875px) {
   .menu {
     display: flex;
@@ -137,26 +161,4 @@ nav {
     text-align: center;
     border-bottom: 1px solid #588369;
   }
-}
-
-#container {
-  max-width: 1920px;
-  margin: auto;
-}
-
-.video-project-card {
-  max-width: 1200px;
-  margin: 3rem auto;
-  border: 1px solid #52785E;
-  border-radius: 8px;
-  padding: 1rem;
-  display: flex;
-}
-
-.video-details {
-  margin-left: 2rem;
-}
-
-.video-details > h2 {
-  margin-top: 0px;
 }
