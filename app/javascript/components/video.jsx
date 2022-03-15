@@ -29,6 +29,8 @@ export const Video = () => {
       {videos.map((videoProject) => {
         return <VideoProject key={videoProject.id} title={videoProject.title} link={videoProject.youtube_link} description={videoProject.description} />
       })}
+
+      <button>Add A Video Project</button>
     </div>
   )
 }
