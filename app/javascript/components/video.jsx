@@ -31,7 +31,9 @@ export const Video = () => {
         return <VideoProject key={videoProject.id} id={videoProject.id} title={videoProject.title} link={videoProject.youtube_link} description={videoProject.description} />
       })}
 
-      <Link to="new"><button>Add A Video Project</button></Link>
+      <div className="add-resource">
+        <Link to="new"><button className="button accent-button">Add A Video Project</button></Link>
+      </div>
     </div>
   )
 }

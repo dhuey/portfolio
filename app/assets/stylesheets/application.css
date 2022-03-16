@@ -104,9 +104,10 @@ nav {
   border-radius: 10px;
 }
 
-#container {
+#wrapper {
   max-width: 1920px;
   margin: auto;
+  position: relative;
 }
 
 .video-project-card {
@@ -124,6 +125,76 @@ nav {
 
 .video-details > h2 {
   margin-top: 0px;
+}
+
+.button {
+  padding: 1rem 2rem;
+  border: none;
+  border-radius: 10px;
+  font-size: 18px;
+  font-family: europa;
+  font-weight: 300;
+  cursor: pointer;
+  transition: hover, 300ms;
+  min-width: 72px;
+  min-width: 72px;
+}
+
+.button:hover {
+  opacity: 75%;
+}
+
+.accent-button {
+  background-color: #ab6936;
+  color: white;
+}
+
+.delete-button {
+  border: 1px solid red;
+  color: red;
+  background-color: #e4e4e4;
+  transition: color, 300ms, background-color, 300ms;
+}
+
+.delete-button:hover {
+  color: white;
+  background-color: red;
+}
+
+.add-resource {
+  text-align: center;
+  margin: 2rem auto;
+}
+
+.form-container {
+  max-width: 800px;
+  margin: auto;
+  text-align: center;
+}
+
+.form-container > h1 {
+  text-align: center;
+}
+
+input[type=text], input[type=url], textarea {
+  width: 90%;
+  max-width: 500px;
+  display: block;
+  margin: 0.5rem auto;
+  font-size: 18px;
+  padding: 0.5rem;
+  border: none;
+  border-radius: 4px;
+  font-family: europa;
+  font-weight: 300;
+}
+
+textarea {
+  min-height: 8rem;
+}
+
+.form-submit {
+  margin-top: 2rem;
 }
 
 /* SMALL SCREEN CHANGES (875PX IS ABOUT WHERE THE CURRENT NAV STARTS TO BREAK) */

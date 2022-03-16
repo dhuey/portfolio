@@ -11,7 +11,7 @@ const App = () => {
   return (
     <div>
       <Nav />
-      <div id="container">
+      <div id="wrapper">
         <Outlet />
       </div>
     </div>

@@ -30,7 +30,7 @@ export const NewVideo = () => {
   }
 
   return (
-    <div>
+    <div className="form-container">
       <Link to="/video">{"<- Back to videos"}</Link>
       <h1>New Video Project</h1>
       <VideoForm onSubmit={submitVideo} video={video} button="Create Video Project" titleChange={handleTitleChange} linkChange={handleLinkChange} descChange={handleDescChange} />

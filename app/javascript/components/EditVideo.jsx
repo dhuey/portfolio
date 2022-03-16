@@ -53,12 +53,12 @@ export const EditVideo = () => {
   }
 
   return (
-    <div>
+    <div className="form-container">
       <Link to="/video">{"<- Back to videos"}</Link>
       <h1>Edit Video Project</h1>
       <VideoForm onSubmit={editVideo} video={video} button="Save Video Project" titleChange={handleTitleChange} linkChange={handleLinkChange} descChange={handleDescChange} />
 
-      <button onClick={deleteVideo}>Delete Video</button>
+      <button className="button delete-button form-submit" onClick={deleteVideo}>Delete Video</button>
     </div>
   )
 };
