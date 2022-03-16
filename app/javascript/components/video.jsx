@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
-import { VideoProject } from './VideoProject.jsx'
+import { VideoProject } from './VideoProject.jsx';
+import { Link } from 'react-router-dom';
 
 const getVideosUrl = "http://localhost:3000/api/v1/videos";
 
@@ -30,7 +31,7 @@ export const Video = () => {
         return <VideoProject key={videoProject.id} title={videoProject.title} link={videoProject.youtube_link} description={videoProject.description} />
       })}
 
-      <button>Add A Video Project</button>
+      <Link to="new"><button>Add A Video Project</button></Link>
     </div>
   )
 }

@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import axios from 'axios';
-import { useNavigate } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 
 export const VideoForm = () => {
   const [video, setVideo] = useState({title: "", youtube_link: "", description: ""});
@@ -31,6 +31,7 @@ export const VideoForm = () => {
   }
   return (
     <div>
+      <Link to="/video">{"<- Back to videos"}</Link>
       <h1>New Video Project</h1>
       <input name="title" id="title" placeholder="Title" onChange={handleTitleChange} value={video.title} /><br />
       <input type="url" name="youtube-link" id="youtube-link" placeholder="Youtube.link" onChange={handleLinkChange} value={video.youtubeLink} /><br />
