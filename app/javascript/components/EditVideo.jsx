@@ -21,8 +21,9 @@ export const EditVideo = () => {
 
   return (
     <div>
+      <Link to="/video">{"<- Back to videos"}</Link>
       <h1>Edit Video Project</h1>
-      <VideoForm />
+      <VideoForm onSubmit={editVideo} video={video} button="Save Video Project" />
 
       <p>{video}</p>
     </div>
