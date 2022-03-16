@@ -31,6 +31,16 @@ class Api::V1::VideosController < ApplicationController
     end
   end
 
+  def destroy
+    @video = Video.find(params[:id])
+
+    if @video.destroy
+      render json: {message: "Successfully deleted video!"}, status: :ok
+    else
+      render json: @video.errors, status: :unprocessable_entity
+    end
+  end
+
   private
 
   def video_params

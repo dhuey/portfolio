@@ -43,13 +43,22 @@ export const EditVideo = () => {
     }
   }
 
+  const deleteVideo = async () => {
+    try {
+      const response = await axios.delete(`http://localhost:3000/api/v1/videos/${id}`);
+      navigate('/video');
+    } catch (error) {
+      console.log(error)
+    }
+  }
+
   return (
     <div>
       <Link to="/video">{"<- Back to videos"}</Link>
       <h1>Edit Video Project</h1>
       <VideoForm onSubmit={editVideo} video={video} button="Save Video Project" titleChange={handleTitleChange} linkChange={handleLinkChange} descChange={handleDescChange} />
 
-      <p>{video.title}</p>
+      <button onClick={deleteVideo}>Delete Video</button>
     </div>
   )
 };
