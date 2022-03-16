@@ -21,6 +21,16 @@ class Api::V1::VideosController < ApplicationController
     render json: @video, status: :ok
   end
 
+  def update
+    @video = Video.find(params[:id])
+
+    if @video.update(video_params)
+      render json: @video, status: :ok
+    else
+      render json: @video.errors, status: :unprocessable_entity
+    end
+  end
+
   private
 
   def video_params

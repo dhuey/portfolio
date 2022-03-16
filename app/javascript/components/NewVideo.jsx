@@ -4,7 +4,7 @@ import axios from 'axios';
 import { VideoForm } from './VideoForm';
 
 export const NewVideo = () => {
-  const [video, setVideo] = useState([{title: "", youtube_link: "", description: ""}]);
+  const [video, setVideo] = useState({title: "", youtube_link: "", description: ""});
   const navigate = useNavigate();
 
   const handleTitleChange = e => {
