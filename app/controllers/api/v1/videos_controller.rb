@@ -15,6 +15,12 @@ class Api::V1::VideosController < ApplicationController
     end
   end
 
+  def edit
+    @video = Video.find(params[:id])
+
+    render json: @video, status: :ok
+  end
+
   private
 
   def video_params

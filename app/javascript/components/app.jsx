@@ -3,7 +3,8 @@ import ReactDOM from 'react-dom';
 import { BrowserRouter, Link, Routes, Route, Outlet } from 'react-router-dom';
 import { Video } from './video';
 import { Nav } from './nav';
-import { VideoForm} from './VideoForm';
+import { VideoForm } from './VideoForm';
+import { EditVideo } from './EditVideo';
 
 const App = () => {
   return (
@@ -22,6 +23,7 @@ ReactDOM.render(
       <Route path="/" element={<App />}>
         <Route path="video" element={<Video />} />
         <Route path="video/new" element={<VideoForm />} />
+        <Route path="video/edit/:id" element={<EditVideo />} />
         <Route path="*" element={<p>404 Not Found</p>} />
       </Route>
     </Routes>

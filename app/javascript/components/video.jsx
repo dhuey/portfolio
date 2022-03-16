@@ -28,7 +28,7 @@ export const Video = () => {
       <h1>dalton huey<br /><span className="h1-dash">&mdash;</span>videographer</h1>
 
       {videos.map((videoProject) => {
-        return <VideoProject key={videoProject.id} title={videoProject.title} link={videoProject.youtube_link} description={videoProject.description} />
+        return <VideoProject key={videoProject.id} id={videoProject.id} title={videoProject.title} link={videoProject.youtube_link} description={videoProject.description} />
       })}
 
       <Link to="new"><button>Add A Video Project</button></Link>
