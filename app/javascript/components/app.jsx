@@ -6,6 +6,7 @@ import { Nav } from './nav';
 import { VideoForm } from './VideoForm';
 import { EditVideo } from './EditVideo';
 import { NewVideo } from './NewVideo';
+import { Footer } from './Footer';
 
 const App = () => {
   return (
@@ -13,6 +14,7 @@ const App = () => {
       <Nav />
       <div id="wrapper">
         <Outlet />
+        <Footer />
       </div>
     </div>
   )
