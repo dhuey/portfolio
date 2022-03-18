@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import axios from 'axios';
+import ax from '../modules/csrfToken';
 import { VideoProject } from './VideoProject.jsx';
 import { Link } from 'react-router-dom';
 
@@ -13,9 +13,10 @@ export const Video = () => {
   const [videos, setVideos] = useState([]);
 
   useEffect(() => {
+    console.log(ax);
     let mounted = true;
     if (mounted) {
-      axios.get(getVideosUrl)
+      ax.get(getVideosUrl)
       .then((response) => setVideos(videos.concat(response.data)))
       .catch((error) => console.log(error));
     };

@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Link, useParams, useNavigate } from 'react-router-dom';
-import axios from 'axios';
+import ax from '../modules/csrfToken';
 import { VideoForm } from './VideoForm';
 import { BackButton } from './BackButton';
 
@@ -11,7 +11,7 @@ export const EditVideo = () => {
 
   const getVideo = async () => {
     try {
-      let request = await axios.get(`http://localhost:3000/api/v1/videos/${id}/edit`);
+      let request = await ax.get(`http://localhost:3000/api/v1/videos/${id}/edit`);
       let videoToEdit = request.data;
       setVideo({title: videoToEdit.title, youtube_link: videoToEdit.youtube_link, description: videoToEdit.description})
     } catch (error) {
@@ -37,7 +37,7 @@ export const EditVideo = () => {
 
   const editVideo = async () => {
     try {
-      const response = await axios.patch(`http://localhost:3000/api/v1/videos/${id}`, video);
+      const response = await ax.patch(`http://localhost:3000/api/v1/videos/${id}`, video);
       navigate('/video');
     } catch (error) {
       console.log(error);
@@ -46,7 +46,7 @@ export const EditVideo = () => {
 
   const deleteVideo = async () => {
     try {
-      const response = await axios.delete(`http://localhost:3000/api/v1/videos/${id}`);
+      const response = await ax.delete(`http://localhost:3000/api/v1/videos/${id}`);
       navigate('/video');
     } catch (error) {
       console.log(error)

@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Link, useParams, useNavigate } from 'react-router-dom';
-import axios from 'axios';
+import ax from '../modules/csrfToken';
 import { VideoForm } from './VideoForm';
 import { BackButton } from './BackButton';
 
@@ -23,7 +23,7 @@ export const NewVideo = () => {
 
   const submitVideo = async () => {
     try {
-      const response = await axios.post('http://localhost:3000/api/v1/videos', video);
+      const response = await ax.post('http://localhost:3000/api/v1/videos', video);
       navigate('/video');
     } catch (error) {
       console.log(error)
