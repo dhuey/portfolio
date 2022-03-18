@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { Link, useParams, useNavigate } from 'react-router-dom';
 import axios from 'axios';
 import { VideoForm } from './VideoForm';
+import { BackButton } from './BackButton';
 
 export const NewVideo = () => {
   const [video, setVideo] = useState({title: "", youtube_link: "", description: ""});
@@ -31,9 +32,11 @@ export const NewVideo = () => {
 
   return (
     <div className="form-container">
-      <Link to="/video">{"<- Back to videos"}</Link>
-      <h1>New Video Project</h1>
-      <VideoForm onSubmit={submitVideo} video={video} button="Create Video Project" titleChange={handleTitleChange} linkChange={handleLinkChange} descChange={handleDescChange} />
+      <BackButton route="/video" />
+      <div className="text-center">
+        <h1>New Video Project</h1>
+        <VideoForm onSubmit={submitVideo} video={video} button="Create Video Project" titleChange={handleTitleChange} linkChange={handleLinkChange} descChange={handleDescChange} />
+      </div>
     </div>
   )
 }

@@ -43,6 +43,10 @@ nav {
   align-content: center;
 }
 
+p {
+  font-size: 18px;
+}
+
 .contained-nav {
   width: 108px;
 }
@@ -119,12 +123,22 @@ nav {
   display: flex;
 }
 
+@media (max-width: 1250px) {
+  .video-project-card {
+    border: none;
+  }
+}
+
 .video-details {
   margin-left: 2rem;
 }
 
 .video-details > h2 {
   margin-top: 0px;
+}
+
+.youtube-embed {
+  aspect-ratio:  16 / 9;
 }
 
 .button {
@@ -169,10 +183,9 @@ nav {
 .form-container {
   max-width: 800px;
   margin: auto;
-  text-align: center;
 }
 
-.form-container > h1 {
+.text-center {
   text-align: center;
 }
 
@@ -195,6 +208,11 @@ textarea {
 
 .form-submit {
   margin-top: 2rem;
+}
+
+.btn-small {
+  padding: 0.5rem 1rem;
+  font-size: 16px;
 }
 
 /* SMALL SCREEN CHANGES (875PX IS ABOUT WHERE THE CURRENT NAV STARTS TO BREAK) */
@@ -232,4 +250,31 @@ textarea {
     text-align: center;
     border-bottom: 1px solid #588369;
   }
+
+  .video-project-card {
+    flex-direction: column;
+    justify-content: center;
+    border: none;
+    width: 95%;
+    padding: 0;
+  }
+
+  .youtube-embed {
+    width: 100%;
+    height: 100%;
+  }
+
+  .video-details {
+    margin: 1rem 0;
+  }
+
+  .video-details > h2 {
+    margin-bottom: 0.5rem;
+  }
+
+  .video-details > p {
+    margin-top: .5rem;
+  }
+
+
 }

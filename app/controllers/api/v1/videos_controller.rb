@@ -1,6 +1,6 @@
 class Api::V1::VideosController < ApplicationController
   def index
-    @videos = Video.all
+    @videos = Video.all.order(created_at: :desc)
 
     render json: @videos
   end
