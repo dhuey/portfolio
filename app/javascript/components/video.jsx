@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import ax from '../modules/csrfToken';
 import { VideoProject } from './VideoProject.jsx';
-import { Link } from 'react-router-dom';
+import { Link, useOutletContext } from 'react-router-dom';
 
 const getVideosUrl = "http://localhost:3000/api/v1/videos";
 
@@ -11,9 +11,9 @@ const getVideoIndex = () => {
 
 export const Video = () => {
   const [videos, setVideos] = useState([]);
+  const [loggedInStatus, user] = useOutletContext();
 
   useEffect(() => {
-    console.log(ax);
     let mounted = true;
     if (mounted) {
       ax.get(getVideosUrl)
@@ -28,6 +28,7 @@ export const Video = () => {
     <div>
       <div className="hero-section">
         <div>
+          <h1>{loggedInStatus}</h1>
           <h1>dalton huey<br /><span className="h1-dash">&mdash;</span>videographer</h1>
           <p>Big and small, I’m passionate about telling stories that matter. Perfectly content to be a writer, a director, a DP, or all of them at once.</p>
         </div>

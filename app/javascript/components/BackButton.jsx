@@ -6,7 +6,7 @@ export const BackButton = (props) => {
     <Link to={props.route}>
       <button className="button btn-small">
         <i className="fa-solid fa-arrow-left" />
-        Back to videos
+        Back to {props.backTo}
       </button>
     </Link>
   )

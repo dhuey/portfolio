@@ -32,7 +32,7 @@ export const NewVideo = () => {
 
   return (
     <div className="form-container">
-      <BackButton route="/video" />
+      <BackButton route="/video" backTo="videos" />
       <div className="text-center">
         <h1>New Video Project</h1>
         <VideoForm onSubmit={submitVideo} video={video} button="Create Video Project" titleChange={handleTitleChange} linkChange={handleLinkChange} descChange={handleDescChange} />

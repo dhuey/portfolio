@@ -55,7 +55,7 @@ export const EditVideo = () => {
 
   return (
     <div className="form-container">
-      <BackButton route="/video" />
+      <BackButton route="/video" backTo="videos" />
       <div className="text-center">
         <h1>Edit Video Project</h1>
         <VideoForm onSubmit={editVideo} video={video} button="Save Video Project" titleChange={handleTitleChange} linkChange={handleLinkChange} descChange={handleDescChange} />
