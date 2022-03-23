@@ -2,6 +2,8 @@ import React, { useState } from 'react';
 import { BackButton } from './BackButton';
 import ax from '../modules/csrfToken';
 import { useNavigate, useOutletContext } from 'react-router-dom';
+import { AuthComponent } from './AuthComponent';
+import { LogoutButton } from './LogoutButton';
 
 export const Login = props => {
   const navigate = useNavigate();
@@ -59,7 +61,7 @@ export const Login = props => {
             <button type="submit" className="button accent-button form-submit">Login</button>
           </form>
 
-          <button className="button delete-button form-submit" onClick={handleLogout}>Logout</button>
+          <AuthComponent component={<LogoutButton />} />
       </div>
     </div>
   )

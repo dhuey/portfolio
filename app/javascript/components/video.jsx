@@ -1,7 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import ax from '../modules/csrfToken';
 import { VideoProject } from './VideoProject.jsx';
-import { Link, useOutletContext } from 'react-router-dom';
+import { Link } from 'react-router-dom';
+import { AuthComponent } from './AuthComponent';
+import { NewVideoButton } from './NewVideoButton';
 
 const getVideosUrl = "http://localhost:3000/api/v1/videos";
 
@@ -11,7 +13,6 @@ const getVideoIndex = () => {
 
 export const Video = () => {
   const [videos, setVideos] = useState([]);
-  const [loggedInStatus, user] = useOutletContext();
 
   useEffect(() => {
     let mounted = true;
@@ -38,9 +39,7 @@ export const Video = () => {
         return <VideoProject key={videoProject.id} id={videoProject.id} title={videoProject.title} link={videoProject.youtube_link} description={videoProject.description} />
       })}
 
-      <div className="add-resource">
-        <Link to="new"><button className="button accent-button">Add A Video Project</button></Link>
-      </div>
+      <AuthComponent component={<NewVideoButton />} />
     </div>
   )
 }
