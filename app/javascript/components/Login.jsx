@@ -13,8 +13,6 @@ export const Login = props => {
     }
   })
 
-  const [internalLoggedInStatus, setInternalLoggedInStatus] = useState("NOT_LOGGED_IN");
-
   const handleEmailChange = e => {
     setSession({
       user: {
@@ -42,7 +40,6 @@ export const Login = props => {
     try {
       const response = await ax.post("http://localhost:3000/api/v1/sessions", session);
       if (response.data.logged_in) {
-        setInternalLoggedInStatus("LOGGED_IN")
         handleSuccessfulAuth(response.data)
       }
       navigate('/video');

@@ -28,7 +28,6 @@ export const Video = () => {
     <div>
       <div className="hero-section">
         <div>
-          <h1>{loggedInStatus}</h1>
           <h1>dalton huey<br /><span className="h1-dash">&mdash;</span>videographer</h1>
           <p>Big and small, I’m passionate about telling stories that matter. Perfectly content to be a writer, a director, a DP, or all of them at once.</p>
         </div>
