@@ -42,7 +42,7 @@ const App = () => {
 
   useEffect(() => {
     checkLoginStatus();
-  })
+  }, []) // This only needs to run when <App /> is mounted. Changes will be caught by handleLogin and handleLogout and will remain in the session.
 
   return (
     <div>
