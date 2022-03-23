@@ -5,19 +5,13 @@ import { Link } from 'react-router-dom';
 import { AuthComponent } from './AuthComponent';
 import { NewVideoButton } from './NewVideoButton';
 
-const getVideosUrl = "http://localhost:3000/api/v1/videos";
-
-const getVideoIndex = () => {
-  return
-}
-
 export const Video = () => {
   const [videos, setVideos] = useState([]);
 
   useEffect(() => {
     let mounted = true;
     if (mounted) {
-      ax.get(getVideosUrl)
+      ax.get("http://localhost:3000/api/v1/videos")
       .then((response) => setVideos(videos.concat(response.data)))
       .catch((error) => console.log(error));
     };
