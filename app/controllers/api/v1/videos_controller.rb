@@ -1,8 +1,15 @@
 class Api::V1::VideosController < ApplicationController
+  before_action :authenticate_user, except: [:index]
   def index
     @videos = Video.all.order(created_at: :desc)
 
     render json: @videos
+  end
+
+  def new
+    @video = Video.new
+
+    render json: @video, status: :ok
   end
 
   def create

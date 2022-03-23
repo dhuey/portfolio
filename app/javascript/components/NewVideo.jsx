@@ -8,6 +8,24 @@ export const NewVideo = () => {
   const [video, setVideo] = useState({title: "", youtube_link: "", description: ""});
   const navigate = useNavigate();
 
+  const getVideo = async () => {
+    try {
+      let request = await ax.get(`http://localhost:3000/api/v1/videos/new`);
+      let video = request.data;
+      setVideo({title: video.title, youtube_link: video.youtube_link, description: video.description})
+    } catch (error) {
+      if (error.response.status === 401) {
+        navigate('/video');
+      } else {
+        console.log(error);
+      }
+    }
+  }
+
+  useEffect(() => {
+    getVideo();
+  }, [])
+
   const handleTitleChange = e => {
     setVideo({title: e.target.value, youtube_link: video.youtube_link, description: video.description});
   }

@@ -15,7 +15,11 @@ export const EditVideo = () => {
       let videoToEdit = request.data;
       setVideo({title: videoToEdit.title, youtube_link: videoToEdit.youtube_link, description: videoToEdit.description})
     } catch (error) {
-      console.log(error);
+      if (error.response.status === 401) {
+        navigate('/video');
+      } else {
+        console.log(error);
+      }
     }
   }
 
