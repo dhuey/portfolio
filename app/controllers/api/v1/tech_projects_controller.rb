@@ -50,7 +50,7 @@ class Api::V1::TechProjectsController < ApplicationController
 
   private
 
-  def video_params
-    params.require(:video).permit(:title, :youtube_link, :description)
+  def tech_project_params
+    params.require(:tech_project).permit(:title, :youtube_link, :repo_link, :demo_link, :description)
   end
 end
