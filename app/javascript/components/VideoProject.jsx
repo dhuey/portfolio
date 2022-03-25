@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link, useOutletContext } from 'react-router-dom';
 import { AuthComponent } from './AuthComponent';
-import { EditVideoButton } from './EditVideoButton';
+import { EditResourceButton } from './EditResourceButton';
 
 export const VideoProject = (props) => {
   const [loggedInStatus, user] = useOutletContext();
@@ -12,7 +12,7 @@ export const VideoProject = (props) => {
       <div className="video-details">
         <h2>{props.title}</h2>
         <p>{props.description}</p>
-        <AuthComponent component={<EditVideoButton id={props.id} />} />
+        <AuthComponent component={<EditResourceButton id={props.id} resourceName="Video Project" />} />
       </div>
     </div>
   )

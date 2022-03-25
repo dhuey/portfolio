@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import ax from "../modules/csrfToken";
 import { TechProject } from "./TechProject";
 import { AuthComponent } from "./AuthComponent";
-import { NewVideoButton } from "./NewVideoButton";
+import { NewResourceButton } from "./NewResourceButton";
 
 export const Tech = () => {
   const [techProjects, setTechProjects] = useState([]);
@@ -22,10 +22,10 @@ export const Tech = () => {
     <div>
       <div className="hero-section">
         <div>
-          <h1>
+          <h1 className="tech-title">
             dalton huey
             <br />
-            <span className="h1-dash">//</span>full-stack web developer
+            <span className="subtitle"><span className="h1-symbol">//</span>full-stack web developer</span>
           </h1>
           <p>
             From HTML, CSS, and JavaScript to React and Ruby on Rails, I’m
@@ -49,7 +49,7 @@ export const Tech = () => {
         );
       })}
 
-      <AuthComponent component={<NewVideoButton />} />
+      <AuthComponent component={<NewResourceButton resourceName="Tech Project" />} />
     </div>
   );
 };

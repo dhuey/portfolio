@@ -1,6 +1,6 @@
 import React from "react";
 import { AuthComponent } from "./AuthComponent";
-import { EditVideoButton } from "./EditVideoButton";
+import { EditResourceButton } from "./EditResourceButton";
 
 export const TechProject = (props) => {
   return (
@@ -24,7 +24,7 @@ export const TechProject = (props) => {
         <a href={props.demoLink} target="_blank">
           View Demo
         </a>
-        <AuthComponent component={<EditVideoButton id={props.id} />} />
+        <AuthComponent component={<EditResourceButton id={props.id} resourceName="Tech Project" />} />
       </div>
     </div>
   );

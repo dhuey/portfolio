@@ -53,7 +53,7 @@ p {
   width: 108px;
 }
 
-.h1-dash {
+.h1-symbol {
   color: #ab6936;
 }
 
@@ -242,6 +242,14 @@ textarea {
   margin-top: 0;
 }
 
+.subtitle {
+  font-size: 36px;
+}
+
+.tech-title {
+  line-height: 48px;
+}
+
 footer {
   border-top: 1px solid #52785E;
   margin-top: 4rem;
@@ -354,5 +362,9 @@ footer {
 
   footer > .footer-menu > .nav-link {
     border: none;
+  }
+
+  .subtitle {
+    font-size: 28px;
   }
 }
