@@ -3,9 +3,11 @@ import ReactDOM from 'react-dom';
 import { BrowserRouter, Link, Routes, Route, Outlet, useNavigate } from 'react-router-dom';
 import { Video } from './video';
 import { Nav } from './nav';
-import { VideoForm } from './VideoForm';
 import { EditVideo } from './EditVideo';
 import { NewVideo } from './NewVideo';
+import { Tech } from './Tech';
+import { NewTech } from './NewTech';
+import { EditTech } from './EditTech';
 import { Footer } from './Footer';
 import { Login } from './Login';
 import ax from '../modules/csrfToken';
@@ -62,6 +64,9 @@ ReactDOM.render(
         <Route path="video" element={<Video />} />
         <Route path="video/new" element={<NewVideo />} />
         <Route path="video/edit/:id" element={<EditVideo />} />
+        <Route path="tech" element={<Tech />} />
+        <Route path="tech/new" element={<NewTech />} />
+        <Route path="tech/edit/:id" element={<EditTech />} />
         <Route path="login" element={<Login />} />
         <Route path="*" element={<p>404 Not Found</p>} />
       </Route>
