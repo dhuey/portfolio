@@ -274,6 +274,18 @@ footer {
   display: inline-block;
 }
 
+.tech-project-button {
+  text-decoration: none;
+  text-align: center;
+  margin: 1rem auto;
+  max-width: 300px;
+}
+
+.tech-project-button > a {
+  color: white;
+  text-decoration: none;
+}
+
 /* SMALL SCREEN CHANGES (875PX IS ABOUT WHERE THE CURRENT NAV STARTS TO BREAK) */
 
 @media (max-width: 875px) {
