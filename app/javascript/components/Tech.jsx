@@ -20,8 +20,8 @@ export const Tech = () => {
 
   const scrollDown = () => {
     const about = document.getElementById("about");
-    about.scrollIntoView({behavior: "smooth"});
-  }
+    about.scrollIntoView({ behavior: "smooth" });
+  };
 
   return (
     <div>
@@ -43,7 +43,11 @@ export const Tech = () => {
       </div>
 
       <div className="text-center">
-        <img src="/down-arrow.svg" className="down-arrow" onClick={scrollDown} />
+        <img
+          src="/down-arrow.svg"
+          className="down-arrow"
+          onClick={scrollDown}
+        />
       </div>
 
       <div className="hero-section tech-about" id="about">

@@ -53,7 +53,7 @@ export const Contact = () => {
   return (
     <div className="form-container text-center">
       <h1>Say hello</h1>
-      <p>
+      <p className="form-comment">
         Interested in hiring me? Just want to say hey? Send me a message through
         the form below.
       </p>
