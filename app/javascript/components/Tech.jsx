@@ -18,6 +18,11 @@ export const Tech = () => {
     return () => (mounted = false);
   }, []);
 
+  const scrollDown = () => {
+    const about = document.getElementById("about");
+    about.scrollIntoView({behavior: "smooth"});
+  }
+
   return (
     <div>
       <div className="hero-section">
@@ -25,7 +30,9 @@ export const Tech = () => {
           <h1 className="tech-title">
             dalton huey
             <br />
-            <span className="subtitle"><span className="h1-symbol">//</span>full-stack web developer</span>
+            <span className="subtitle">
+              <span className="h1-symbol">//</span>full-stack web developer
+            </span>
           </h1>
           <p>
             From HTML, CSS, and JavaScript to React and Ruby on Rails, I’m
@@ -35,23 +42,40 @@ export const Tech = () => {
         <img src="/dalton-profile-large.jpg" />
       </div>
 
-      <div className="hero-section tech-about">
+      <div className="text-center">
+        <img src="/down-arrow.svg" className="down-arrow" onClick={scrollDown} />
+      </div>
+
+      <div className="hero-section tech-about" id="about">
         <img src="/dalton-profile-large.jpg" />
         <div>
-          <h2><span className="h1-symbol">//</span>about me</h2>
-          <p>I’m a full-stack web developer based in Lawrence, KS. When I was first asked about learning some HTML and CSS on the job, I jumped at the opportunity. Soon after, I had been thrown into the deep end and was working with a small team of developers on our client-facing Rails apps.</p>
+          <h2>
+            <span className="h1-symbol">//</span>about me
+          </h2>
+          <p>
+            I’m a full-stack web developer based in Lawrence, KS. In 2016, when
+            I was first asked about learning some HTML and CSS on the job, I
+            jumped at the opportunity. Soon after, I had been thrown into the
+            deep end and was working with a small team of developers on our
+            client-facing Rails apps.
+          </p>
 
-          <p>Since then, I’ve developed a passion for creating web apps that solve real-world problems. You’ll see a few examples of my work below.</p>
+          <p>
+            Since then, I’ve developed a passion for creating web apps that
+            solve real-world problems. You’ll see a few examples of my work
+            below.
+          </p>
 
-          <p><strong>Skills & Technologies:</strong></p>
-            <img src="/html5-logo.svg" alt="HTML" />
-            <img src="/css3-logo.svg" alt="CSS" />
-            <img src="js-logo.svg" alt="JavaScript" />
-            <img src="react-logo.svg" alt="React" />
-            <img src="ruby-logo.svg" alt="Ruby" />
-            <img src="rails-logo.svg" alt="Ruby on Rails" />
+          <p>
+            <strong>Skills & Technologies:</strong>
+          </p>
+          <img src="/html5-logo.svg" alt="HTML" />
+          <img src="/css3-logo.svg" alt="CSS" />
+          <img src="js-logo.svg" alt="JavaScript" />
+          <img src="react-logo.svg" alt="React" />
+          <img src="ruby-logo.svg" alt="Ruby" />
+          <img src="rails-logo.svg" alt="Ruby on Rails" />
         </div>
-
       </div>
 
       {techProjects.map((techProject) => {
@@ -68,7 +92,9 @@ export const Tech = () => {
         );
       })}
 
-      <AuthComponent component={<NewResourceButton resourceName="Tech Project" />} />
+      <AuthComponent
+        component={<NewResourceButton resourceName="Tech Project" />}
+      />
     </div>
   );
 };

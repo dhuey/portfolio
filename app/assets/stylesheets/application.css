@@ -32,6 +32,7 @@ h1 {
 h2 {
   font-family:  europa, sans-serif;
   font-weight: 700;
+  font-size: 32px;
 }
 
 div, p, a {
@@ -190,6 +191,18 @@ p {
 .text-center {
   text-align: center;
 }
+
+.down-arrow {
+  max-width: 4rem;
+  transition: transform 300ms;
+  cursor: pointer;
+}
+
+.down-arrow:hover {
+  transform: scale(1.5);
+}
+
+
 
 input[type=text], input[type=url], input[type=email], input[type=password], textarea {
   width: 90%;
