@@ -3,6 +3,7 @@ import ax from "../modules/csrfToken";
 import { ContactForm } from "./ContactForm";
 
 export const Contact = () => {
+  const [formSubmitted, setFormSubmitted] = useState(false);
   const [contact, setContact] = useState({
     name: "",
     email: "",
@@ -33,9 +34,20 @@ export const Contact = () => {
     });
   };
 
-  const sendMessage = e => {
+  const sendMessage = async (e) => {
     e.preventDefault();
-    console.log(contact);
+    try {
+      let request = await ax.post(
+        "http://localhost:3000/api/v1/messages",
+        contact
+      );
+      console.log(request);
+      if (request.status === 201) {
+        setFormSubmitted(true);
+      }
+    } catch (error) {
+      console.log(error);
+    }
   };
 
   return (
@@ -54,6 +66,7 @@ export const Contact = () => {
         messageChange={messageChange}
         onSubmit={sendMessage}
         button="Send Message"
+        hide={formSubmitted}
       />
     </div>
   );

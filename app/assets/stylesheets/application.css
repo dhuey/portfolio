@@ -291,6 +291,14 @@ footer {
   margin: 1rem;
 }
 
+.contact-success {
+  margin-top: 4rem;
+  font-size: 2rem;
+  border: 1px solid #16644E;
+  padding: 4rem;
+
+}
+
 /* SMALL SCREEN CHANGES (875PX IS ABOUT WHERE THE CURRENT NAV STARTS TO BREAK) */
 
 @media (max-width: 875px) {
