@@ -277,13 +277,18 @@ footer {
 .tech-project-button {
   text-decoration: none;
   text-align: center;
-  margin: 1rem auto;
+  margin: 1.5rem auto;
   max-width: 300px;
 }
 
 .tech-project-button > a {
   color: white;
   text-decoration: none;
+}
+
+.tech-about > div > img {
+  max-height: 2.5rem;
+  margin: 1rem;
 }
 
 /* SMALL SCREEN CHANGES (875PX IS ABOUT WHERE THE CURRENT NAV STARTS TO BREAK) */
@@ -378,5 +383,10 @@ footer {
 
   .subtitle {
     font-size: 28px;
+  }
+
+  .tech-about {
+    flex-direction: column;
+    margin: 10rem auto;
   }
 }

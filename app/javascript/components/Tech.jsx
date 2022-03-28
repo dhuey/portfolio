@@ -35,6 +35,25 @@ export const Tech = () => {
         <img src="/dalton-profile-large.jpg" />
       </div>
 
+      <div className="hero-section tech-about">
+        <img src="/dalton-profile-large.jpg" />
+        <div>
+          <h2><span className="h1-symbol">//</span>about me</h2>
+          <p>I’m a full-stack web developer based in Lawrence, KS. When I was first asked about learning some HTML and CSS on the job, I jumped at the opportunity. Soon after, I had been thrown into the deep end and was working with a small team of developers on our client-facing Rails apps.</p>
+
+          <p>Since then, I’ve developed a passion for creating web apps that solve real-world problems. You’ll see a few examples of my work below.</p>
+
+          <p><strong>Skills & Technologies:</strong></p>
+            <img src="/html5-logo.svg" alt="HTML" />
+            <img src="/css3-logo.svg" alt="CSS" />
+            <img src="js-logo.svg" alt="JavaScript" />
+            <img src="react-logo.svg" alt="React" />
+            <img src="ruby-logo.svg" alt="Ruby" />
+            <img src="rails-logo.svg" alt="Ruby on Rails" />
+        </div>
+
+      </div>
+
       {techProjects.map((techProject) => {
         return (
           <TechProject
