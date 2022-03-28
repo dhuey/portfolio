@@ -10,6 +10,7 @@ import { NewTech } from './NewTech';
 import { EditTech } from './EditTech';
 import { Footer } from './Footer';
 import { Login } from './Login';
+import { Contact } from './Contact';
 import ax from '../modules/csrfToken';
 
 const App = () => {
@@ -67,6 +68,7 @@ ReactDOM.render(
         <Route path="tech" element={<Tech />} />
         <Route path="tech/new" element={<NewTech />} />
         <Route path="tech/edit/:id" element={<EditTech />} />
+        <Route path="contact" element={<Contact />} />
         <Route path="login" element={<Login />} />
         <Route path="*" element={<p>404 Not Found</p>} />
       </Route>
