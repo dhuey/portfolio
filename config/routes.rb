@@ -6,6 +6,7 @@ Rails.application.routes.draw do
       resources :videos
       resources :tech_projects
       resources :sessions, only: [:create ]
+      resources :messages, only: [:new, :create]
       delete :logout, to: "sessions#logout"
       get :logged_in, to: "sessions#logged_in"
     end
