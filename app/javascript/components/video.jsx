@@ -9,6 +9,7 @@ export const Video = () => {
   const [videos, setVideos] = useState([]);
 
   useEffect(() => {
+    document.title = "Video — Dalton Huey";
     let mounted = true;
     if (mounted) {
       ax.get("http://localhost:3000/api/v1/videos")

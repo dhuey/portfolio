@@ -8,6 +8,7 @@ export const Tech = () => {
   const [techProjects, setTechProjects] = useState([]);
 
   useEffect(() => {
+    document.title = "Full-Stack Web Developer — Dalton Huey"
     let mounted = true;
     if (mounted) {
       ax.get("http://localhost:3000/api/v1/tech_projects")

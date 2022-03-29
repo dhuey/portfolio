@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { BackButton } from './BackButton';
 import ax from '../modules/csrfToken';
 import { useNavigate, useOutletContext } from 'react-router-dom';
@@ -13,6 +13,10 @@ export const Login = props => {
       email: "",
       password: ""
     }
+  })
+
+  useEffect(() => {
+    document.title = "Login — Dalton Huey";
   })
 
   const handleEmailChange = e => {

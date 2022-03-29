@@ -23,6 +23,7 @@ export const NewVideo = () => {
   }
 
   useEffect(() => {
+    document.title = "Create Video Project — Dalton Huey";
     getVideo();
   }, [])
 

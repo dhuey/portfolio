@@ -1,8 +1,11 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import ax from "../modules/csrfToken";
 import { ContactForm } from "./ContactForm";
 
 export const Contact = () => {
+  useEffect(() => {
+    document.title = "Contact — Dalton Huey";
+  }, [])
   const [formSubmitted, setFormSubmitted] = useState(false);
   const [contact, setContact] = useState({
     name: "",

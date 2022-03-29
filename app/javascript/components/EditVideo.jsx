@@ -36,6 +36,7 @@ export const EditVideo = () => {
   }
 
   useEffect(() => {
+    document.title = "Edit Video Project — Dalton Huey";
     getVideo();
   }, [])
 

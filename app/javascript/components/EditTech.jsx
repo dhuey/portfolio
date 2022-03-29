@@ -88,6 +88,7 @@ export const EditTech = () => {
   };
 
   useEffect(() => {
+    document.title = "Edit Tech Project — Dalton Huey";
     getTechProject();
   }, []);
 

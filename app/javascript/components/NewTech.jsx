@@ -37,6 +37,7 @@ export const NewTech = () => {
   };
 
   useEffect(() => {
+    document.title = "Create Tech Project — Dalton Huey";
     getTechProject();
   }, []);
 
