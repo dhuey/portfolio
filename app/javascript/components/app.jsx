@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import ReactDOM from 'react-dom';
 import { BrowserRouter, Link, Routes, Route, Outlet, useNavigate } from 'react-router-dom';
+import { Home } from './Home';
 import { Video } from './video';
 import { Nav } from './nav';
 import { EditVideo } from './EditVideo';
@@ -63,6 +64,7 @@ ReactDOM.render(
   <BrowserRouter>
     <Routes>
       <Route path="/" element={<App />}>
+        <Route path="" element={<Home />} />
         <Route path="video" element={<Video />} />
         <Route path="video/new" element={<NewVideo />} />
         <Route path="video/edit/:id" element={<EditVideo />} />

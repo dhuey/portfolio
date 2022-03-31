@@ -24,7 +24,7 @@ export const Nav = (props) => {
         </Link>
 
         <div className={`nav-collection ${isOpen ? "active-menu" : ""}`}>
-          <Link className="nav-link" to="/music" onClick={hideMenu}>music</Link>
+          <Link className="nav-link" to="/" onClick={hideMenu}>home</Link>
           <Link className="nav-link" to="/tech" onClick={hideMenu}>tech</Link>
           <Link className="nav-link" to="/video" onClick={hideMenu}>video</Link>
           <Link className="nav-link" to="/contact" onClick={hideMenu}>contact</Link>
