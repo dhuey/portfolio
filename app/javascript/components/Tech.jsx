@@ -57,7 +57,7 @@ export const Tech = () => {
           <h2>
             <span className="h1-symbol">//</span>about me
           </h2>
-          <p>
+          <p className="manifesto-para">
             I’m a full-stack web developer based in Lawrence, KS. In 2016, when
             I was first asked about learning some HTML and CSS on the job, I
             jumped at the opportunity. Soon after, I had been thrown into the
@@ -65,7 +65,7 @@ export const Tech = () => {
             client-facing Rails apps.
           </p>
 
-          <p>
+          <p className="manifesto-para">
             Since then, I’ve developed a passion for creating web apps that
             solve real-world problems. You’ll see a few examples of my work
             below.

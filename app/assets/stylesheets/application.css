@@ -321,6 +321,28 @@ footer {
 
 }
 
+.boxed-section {
+  max-width: 80%;
+  margin: 4rem auto;
+}
+
+.manifesto > p {
+  font-family: novel-pro, sans-serif;
+  font-weight: 200;
+  font-size: 20px;
+  line-height: 34px;
+  max-width: 40rem;
+  text-align: left;
+  margin: 2rem auto;
+}
+
+.manifesto-para {
+  font-family: novel-pro, sans-serif;
+  font-weight: 200;
+  font-size: 20px !important;
+  line-height: 34px !important;
+}
+
 /* SMALL SCREEN CHANGES (875PX IS ABOUT WHERE THE CURRENT NAV STARTS TO BREAK) */
 
 @media (max-width: 875px) {
@@ -417,6 +439,6 @@ footer {
 
   .tech-about {
     flex-direction: column;
-    margin: 10rem auto;
+    margin: 6rem auto;
   }
 }
