@@ -13,7 +13,7 @@ export const Home = () => {
 
   return (
     <div>
-      <div className="hero-section">
+      <div className="hero-section" id="hero">
         <div>
           <h1>
             dalton huey
@@ -107,12 +107,19 @@ export const Home = () => {
           </Link>
         </div>
       </div>
-      <div className="boxed-section">
-        <h2>but first, tell me a bit about yourself</h2>
+      <div className="boxed-section text-center">
+        <h2><span className="h1-symbol">&mdash;</span>who you are</h2>
+        <p>What are you most interested in?</p>
         <div className="content-card-container">
-          <div className="content-card">I'm interested in video</div>
-          <div className="content-card-container">
-            I'm interested in web development
+          <div className="content-card">
+            <Link to="video">
+              I'm interested in video
+            </Link>
+          </div>
+          <div className="content-card">
+            <Link to="tech">
+              I'm interested in web development
+            </Link>
           </div>
         </div>
       </div>

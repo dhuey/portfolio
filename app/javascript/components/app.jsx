@@ -12,6 +12,7 @@ import { EditTech } from './EditTech';
 import { Footer } from './Footer';
 import { Login } from './Login';
 import { Contact } from './Contact';
+import { ScrollToTop } from './ScrollToTop';
 import ax from '../modules/csrfToken';
 
 const App = () => {
@@ -62,6 +63,7 @@ const App = () => {
 
 ReactDOM.render(
   <BrowserRouter>
+    <ScrollToTop />
     <Routes>
       <Route path="/" element={<App />}>
         <Route path="" element={<Home />} />

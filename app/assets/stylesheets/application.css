@@ -343,6 +343,37 @@ footer {
   line-height: 34px !important;
 }
 
+.content-card-container {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.content-card {
+  background-color: grey;
+  width: 24%;
+  aspect-ratio: 4 / 5 ;
+  font-size: 24px;
+  font-weight: 700;
+  transition: transform 300ms ease-in-out;
+}
+
+.content-card > a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  text-decoration: none;
+  height: 100%;
+  width: 100%;
+  padding: 2rem;
+  box-sizing: border-box;
+}
+
+.content-card:hover {
+  transform: scale(1.05);
+}
+
 /* SMALL SCREEN CHANGES (875PX IS ABOUT WHERE THE CURRENT NAV STARTS TO BREAK) */
 
 @media (max-width: 875px) {
