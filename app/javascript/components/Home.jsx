@@ -1,14 +1,15 @@
-import React, { useEffect } from "react";
-import { Link } from "react-router-dom";
+import React, { useEffect } from 'react';
+import { Link } from 'react-router-dom';
+import { ContentCard } from './ContentCard'
 
 export const Home = () => {
   useEffect(() => {
-    document.title = "dalton huey—creative"
+    document.title = 'dalton huey—creative'
   })
 
   const scrollDown = () => {
-    const about = document.getElementById("about");
-    about.scrollIntoView({ behavior: "smooth" });
+    const about = document.getElementById('about');
+    about.scrollIntoView({ behavior: 'smooth' });
   };
 
   return (
@@ -68,16 +69,8 @@ export const Home = () => {
         <h2><span className="h1-symbol">&mdash;</span>who you are</h2>
         <p>What are you most interested in?</p>
         <div className="content-card-container">
-          <div className="content-card" id="video-content-card">
-            <Link to="video">
-              Video
-            </Link>
-          </div>
-          <div className="content-card">
-            <Link to="tech">
-              Web Development
-            </Link>
-          </div>
+          <ContentCard cssId="video-content-card" path="video" text="Video" />
+          <ContentCard cssId="tech-content-card" path="tech" text="Web Development" />
         </div>
       </div>
 

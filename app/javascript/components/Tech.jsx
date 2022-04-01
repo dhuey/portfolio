@@ -40,7 +40,7 @@ export const Tech = () => {
             passionate about creating web apps that make a difference.
           </p>
         </div>
-        <img src="/dalton-profile-large.jpg" />
+        <img src="/dalton-huey-web-developer.jpg" />
       </div>
 
       <div className="text-center">
