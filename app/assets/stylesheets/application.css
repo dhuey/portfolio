@@ -374,6 +374,12 @@ footer {
   transform: scale(1.05);
 }
 
+.not-found{
+  padding-top: 6rem;
+  max-width: 600px;
+  margin: auto;
+}
+
 /* SMALL SCREEN CHANGES (875PX IS ABOUT WHERE THE CURRENT NAV STARTS TO BREAK) */
 
 @media (max-width: 875px) {

@@ -12,6 +12,7 @@ import { EditTech } from './EditTech';
 import { Footer } from './Footer';
 import { Login } from './Login';
 import { Contact } from './Contact';
+import { NotFound } from './NotFound';
 import { ScrollToTop } from './ScrollToTop';
 import ax from '../modules/csrfToken';
 
@@ -75,7 +76,7 @@ ReactDOM.render(
         <Route path="tech/edit/:id" element={<EditTech />} />
         <Route path="contact" element={<Contact />} />
         <Route path="login" element={<Login />} />
-        <Route path="*" element={<p>404 Not Found</p>} />
+        <Route path="*" element={<NotFound />} />
       </Route>
     </Routes>
   </BrowserRouter>, document.getElementById("app"));
