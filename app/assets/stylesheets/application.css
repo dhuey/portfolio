@@ -347,6 +347,7 @@ footer {
   display: flex;
   justify-content: center;
   gap: 2rem;
+  margin: 2rem auto 8rem auto;
 }
 
 .content-card {
@@ -354,8 +355,8 @@ footer {
   width: 24%;
   aspect-ratio: 4 / 5 ;
   font-size: 24px;
-  font-weight: 700;
-  transition: transform 300ms ease-in-out;
+  transition: transform 300ms ease-in-out, filter 300ms ease-in-out;
+  background-size: cover;
 }
 
 .content-card > a {
@@ -367,11 +368,21 @@ footer {
   height: 100%;
   width: 100%;
   padding: 2rem;
+  font-weight: 700;
   box-sizing: border-box;
 }
 
 .content-card:hover {
   transform: scale(1.05);
+}
+
+
+#video-content-card {
+  background-image: url("video-content.jpg");
+}
+
+#video-content-card:hover {
+  backdrop-filter: blur(5px);
 }
 
 .not-found{
@@ -477,5 +488,19 @@ footer {
   .tech-about {
     flex-direction: column;
     margin: 6rem auto;
+  }
+
+  .content-card-container {
+    flex-direction: column;
+  }
+
+  .content-card {
+    aspect-ratio: 6 / 4;
+    width: 100%;
+    background-position: center;
+  }
+
+  .content-card > a {
+    font-size: 18px;
   }
 }

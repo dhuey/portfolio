@@ -13,7 +13,7 @@ export const Home = () => {
 
   return (
     <div>
-      <div className="hero-section" id="hero">
+      <div className="hero-section">
         <div>
           <h1>
             dalton huey
@@ -39,7 +39,7 @@ export const Home = () => {
       </div>
 
       <div className="hero-section tech-about" id="about">
-        <img src="/dalton-profile-large.jpg" />
+        <img src="/about-dalton-huey.jpg" />
         <div className="manifesto">
           <h2>
             <span className="h1-symbol">&mdash;</span>about me
@@ -61,6 +61,23 @@ export const Home = () => {
             ever interested in working together, please send me a message. I'd
             love to connect.
           </p>
+        </div>
+      </div>
+
+      <div className="boxed-section text-center">
+        <h2><span className="h1-symbol">&mdash;</span>who you are</h2>
+        <p>What are you most interested in?</p>
+        <div className="content-card-container">
+          <div className="content-card" id="video-content-card">
+            <Link to="video">
+              Video
+            </Link>
+          </div>
+          <div className="content-card">
+            <Link to="tech">
+              Web Development
+            </Link>
+          </div>
         </div>
       </div>
 
@@ -105,22 +122,6 @@ export const Home = () => {
           <Link to="contact">
             <button className="button accent-button">Drop me a line</button>
           </Link>
-        </div>
-      </div>
-      <div className="boxed-section text-center">
-        <h2><span className="h1-symbol">&mdash;</span>who you are</h2>
-        <p>What are you most interested in?</p>
-        <div className="content-card-container">
-          <div className="content-card">
-            <Link to="video">
-              I'm interested in video
-            </Link>
-          </div>
-          <div className="content-card">
-            <Link to="tech">
-              I'm interested in web development
-            </Link>
-          </div>
         </div>
       </div>
     </div>
