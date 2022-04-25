@@ -4,6 +4,7 @@ import { VideoProject } from './VideoProject.jsx';
 import { Link } from 'react-router-dom';
 import { AuthComponent } from './AuthComponent';
 import { NewResourceButton } from './NewResourceButton';
+import HOST_URL from '../modules/hostUrl';
 
 export const Video = () => {
   const [videos, setVideos] = useState([]);
@@ -12,7 +13,7 @@ export const Video = () => {
     document.title = "Video — Dalton Huey";
     let mounted = true;
     if (mounted) {
-      ax.get("http://localhost:3000/api/v1/videos")
+      ax.get(`${HOST_URL}api/v1/videos`)
       .then((response) => setVideos(videos.concat(response.data)))
       .catch((error) => console.log(error));
     };

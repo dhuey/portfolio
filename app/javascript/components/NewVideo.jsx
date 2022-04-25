@@ -3,6 +3,7 @@ import { Link, useParams, useNavigate } from 'react-router-dom';
 import ax from '../modules/csrfToken';
 import { VideoForm } from './VideoForm';
 import { BackButton } from './BackButton';
+import HOST_URL from '../modules/hostUrl';
 
 export const NewVideo = () => {
   const [video, setVideo] = useState({title: "", youtube_link: "", description: ""});
@@ -10,7 +11,7 @@ export const NewVideo = () => {
 
   const getVideo = async () => {
     try {
-      let request = await ax.get(`http://localhost:3000/api/v1/videos/new`);
+      let request = await ax.get(`${HOST_URL}api/v1/videos/new`);
       let video = request.data;
       setVideo({title: video.title, youtube_link: video.youtube_link, description: video.description})
     } catch (error) {
@@ -42,7 +43,7 @@ export const NewVideo = () => {
 
   const submitVideo = async () => {
     try {
-      const response = await ax.post('http://localhost:3000/api/v1/videos', video);
+      const response = await ax.post(`${HOST_URL}api/v1/videos`, video);
       navigate('/video');
     } catch (error) {
       console.log(error)

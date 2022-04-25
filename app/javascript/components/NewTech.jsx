@@ -3,6 +3,7 @@ import { useNavigate } from "react-router-dom";
 import ax from "../modules/csrfToken";
 import { TechForm } from "./TechForm";
 import { BackButton } from "./BackButton";
+import HOST_URL from "../modules/hostUrl";
 
 export const NewTech = () => {
   const [techProject, setTechProject] = useState({
@@ -17,7 +18,7 @@ export const NewTech = () => {
   const getTechProject = async () => {
     try {
       let request = await ax.get(
-        `http://localhost:3000/api/v1/tech_projects/new`
+        `${HOST_URL}api/v1/tech_projects/new`
       );
       let newTechProject = request.data;
       setTechProject({
@@ -94,7 +95,7 @@ export const NewTech = () => {
   const submitTechProject = async () => {
     try {
       const response = await ax.post(
-        "http://localhost:3000/api/v1/tech_projects",
+        `${HOST_URL}api/v1/tech_projects`,
         techProject
       );
       navigate("/tech");

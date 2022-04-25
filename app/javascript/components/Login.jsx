@@ -4,6 +4,7 @@ import ax from '../modules/csrfToken';
 import { useNavigate, useOutletContext } from 'react-router-dom';
 import { AuthComponent } from './AuthComponent';
 import { LogoutButton } from './LogoutButton';
+import HOST_URL from '../modules/hostUrl';
 
 export const Login = props => {
   const navigate = useNavigate();
@@ -44,7 +45,7 @@ export const Login = props => {
   const onSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await ax.post("http://localhost:3000/api/v1/sessions", session);
+      const response = await ax.post(`${HOST_URL}api/v1/sessions`, session);
       if (response.data.logged_in) {
         handleSuccessfulAuth(response.data)
       }

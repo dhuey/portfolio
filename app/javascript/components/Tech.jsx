@@ -3,6 +3,7 @@ import ax from "../modules/csrfToken";
 import { TechProject } from "./TechProject";
 import { AuthComponent } from "./AuthComponent";
 import { NewResourceButton } from "./NewResourceButton";
+import HOST_URL from "../modules/hostUrl";
 
 export const Tech = () => {
   const [techProjects, setTechProjects] = useState([]);
@@ -11,7 +12,7 @@ export const Tech = () => {
     document.title = "Full-Stack Web Developer — Dalton Huey"
     let mounted = true;
     if (mounted) {
-      ax.get("http://localhost:3000/api/v1/tech_projects")
+      ax.get(`${HOST_URL}api/v1/tech_projects`)
         .then((response) => setTechProjects(techProjects.concat(response.data)))
         .catch((error) => console.log(error));
     }

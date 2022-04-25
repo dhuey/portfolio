@@ -3,6 +3,7 @@ import { useParams, useNavigate } from "react-router-dom";
 import ax from "../modules/csrfToken";
 import { TechForm } from "./TechForm";
 import { BackButton } from "./BackButton";
+import HOST_URL from "../modules/hostUrl";
 
 export const EditTech = () => {
   const { id } = useParams(); // useParams() returns an object, so destructuring is needed here
@@ -18,7 +19,7 @@ export const EditTech = () => {
   const getTechProject = async () => {
     try {
       let request = await ax.get(
-        `http://localhost:3000/api/v1/tech_projects/${id}/edit`
+        `${HOST_URL}api/v1/tech_projects/${id}/edit`
       );
       let techToEdit = request.data;
       setTechProject({
@@ -95,7 +96,7 @@ export const EditTech = () => {
   const editTechProject = async () => {
     try {
       const response = await ax.patch(
-        `http://localhost:3000/api/v1/tech_projects/${id}`,
+        `${HOST_URL}api/v1/tech_projects/${id}`,
         techProject
       );
       navigate("/tech");
@@ -107,7 +108,7 @@ export const EditTech = () => {
   const deleteTechProject = async () => {
     try {
       const response = await ax.delete(
-        `http://localhost:3000/api/v1/tech_projects/${id}`
+        `${HOST_URL}api/v1/tech_projects/${id}`
       );
       navigate("/tech");
     } catch (error) {

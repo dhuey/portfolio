@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import ax from "../modules/csrfToken";
 import { ContactForm } from "./ContactForm";
+import HOST_URL from "../modules/hostUrl";
 
 export const Contact = () => {
   useEffect(() => {
@@ -41,7 +42,7 @@ export const Contact = () => {
     e.preventDefault();
     try {
       let request = await ax.post(
-        "http://localhost:3000/api/v1/messages",
+        `${HOST_URL}api/v1/messages`,
         contact
       );
       console.log(request);

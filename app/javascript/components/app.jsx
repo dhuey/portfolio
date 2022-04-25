@@ -15,6 +15,7 @@ import { Contact } from './Contact';
 import { NotFound } from './NotFound';
 import { ScrollToTop } from './ScrollToTop';
 import ax from '../modules/csrfToken';
+import HOST_URL from '../modules/hostUrl.js'
 
 const App = () => {
   const navigate = useNavigate();
@@ -27,7 +28,7 @@ const App = () => {
   }
 
   const handleLogout = async () => {
-    const response = await ax.delete("http://localhost:3000/api/v1/logout");
+    const response = await ax.delete(`${HOST_URL}api/v1/logout`);
     if (response.data.logged_out) {
       setLoggedInStatus("NOT_LOGGED_IN");
       setUser({});
@@ -36,7 +37,7 @@ const App = () => {
   }
 
   const checkLoginStatus = async () => {
-    const response = await ax.get("http://localhost:3000/api/v1/logged_in");
+    const response = await ax.get(`${HOST_URL}api/v1/logged_in`);
     if (response.data.logged_in === true && loggedInStatus === "NOT_LOGGED_IN") {
       setLoggedInStatus("LOGGED_IN");
       setUser(response.data.user);
