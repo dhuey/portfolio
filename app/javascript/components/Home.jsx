@@ -28,7 +28,7 @@ export const Home = () => {
             house with just a hammer.
           </p>
         </div>
-        <img src="/dalton-profile-large.jpg" />
+        <img src="/dalton-huey.jpg" />
       </div>
 
       <div className="text-center">

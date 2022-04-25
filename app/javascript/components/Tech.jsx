@@ -53,7 +53,7 @@ export const Tech = () => {
       </div>
 
       <div className="hero-section tech-about" id="about">
-        <img src="/dalton-profile-large.jpg" />
+        <img src="/dalton-huey.jpg" />
         <div>
           <h2>
             <span className="h1-symbol">//</span>about me

@@ -28,7 +28,7 @@ export const Video = () => {
           <h1>dalton huey<br /><span className="h1-symbol">&mdash;</span>videographer</h1>
           <p>Big and small, I’m passionate about telling stories that matter. Perfectly content to be a writer, a director, a DP, or all of them at once.</p>
         </div>
-        <img src="/dalton-profile-large.jpg" />
+        <img src="/dalton-huey.jpg" />
       </div>
 
       {videos.map((videoProject) => {
