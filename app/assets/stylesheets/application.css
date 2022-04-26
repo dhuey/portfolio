@@ -310,7 +310,7 @@ footer {
 
 .tech-about > div > img {
   max-height: 2.5rem;
-  margin: 1rem;
+  /*margin: 1rem;*/
 }
 
 .contact-success {
