@@ -314,6 +314,10 @@ footer {
   display: inline-block;
 }
 
+.tech-about > div {
+  width: 100%;
+}
+
 .contact-success {
   margin-top: 4rem;
   font-size: 2rem;
