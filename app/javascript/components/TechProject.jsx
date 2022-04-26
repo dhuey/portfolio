@@ -31,7 +31,7 @@ export const TechProject = (props) => {
         />
         <TechProjectButton
           link={props.demoLink}
-          text="See how it works"
+          text="See it in action"
           iconClass="fa-solid fa-display"
         />
       </div>

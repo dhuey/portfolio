@@ -303,7 +303,7 @@ footer {
   max-width: 300px;
 }
 
-.tech-project-button > a {
+.tech-project-link {
   color: white;
   text-decoration: none;
 }
