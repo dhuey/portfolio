@@ -75,9 +75,10 @@ export const Tech = () => {
           <p>
             <strong>Skills & Technologies:</strong>
           </p>
-          {/*<img src="html5-logo.svg" alt="HTML" />*/}
+
           <img src="css3-logo.svg" alt="CSS" />
           <img src="js-logo.svg" alt="JavaScript" />
+          <img src="html5-logo.svg" alt="HTML" />
           {/*<img src="react-logo.svg" alt="React" />*/}
           <img src="ruby-logo.svg" alt="Ruby" />
           <img src="rails-logo.svg" alt="Ruby on Rails" />
