@@ -39,7 +39,7 @@ const App = () => {
     if (response.data.logged_out) {
       setLoggedInStatus("NOT_LOGGED_IN");
       setUser({});
-      navigate("/video");
+      navigate("/");
     }
   };
 

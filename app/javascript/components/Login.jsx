@@ -49,7 +49,7 @@ export const Login = (props) => {
       if (response.data.logged_in) {
         handleSuccessfulAuth(response.data);
       }
-      navigate("/video");
+      navigate("/");
     } catch (error) {
       console.log(error);
     }
