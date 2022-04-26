@@ -18,9 +18,7 @@ export const EditTech = () => {
 
   const getTechProject = async () => {
     try {
-      let request = await ax.get(
-        `${HOST_URL}api/v1/tech_projects/${id}/edit`
-      );
+      let request = await ax.get(`${HOST_URL}api/v1/tech_projects/${id}/edit`);
       let techToEdit = request.data;
       setTechProject({
         title: techToEdit.title,
@@ -44,7 +42,7 @@ export const EditTech = () => {
       youtube_link: techProject.youtube_link,
       repo_link: techProject.repo_link,
       demo_link: techProject.demo_link,
-      description: techProject.description
+      description: techProject.description,
     });
   };
 
@@ -54,7 +52,7 @@ export const EditTech = () => {
       youtube_link: e.target.value,
       repo_link: techProject.repo_link,
       demo_link: techProject.demo_link,
-      description: techProject.description
+      description: techProject.description,
     });
   };
 
@@ -64,7 +62,7 @@ export const EditTech = () => {
       youtube_link: techProject.youtube_link,
       repo_link: e.target.value,
       demo_link: techProject.demo_link,
-      description: techProject.description
+      description: techProject.description,
     });
   };
 
@@ -74,7 +72,7 @@ export const EditTech = () => {
       youtube_link: techProject.youtube_link,
       repo_link: techProject.repo_link,
       demo_link: e.target.value,
-      description: techProject.description
+      description: techProject.description,
     });
   };
 
@@ -107,9 +105,7 @@ export const EditTech = () => {
 
   const deleteTechProject = async () => {
     try {
-      const response = await ax.delete(
-        `${HOST_URL}api/v1/tech_projects/${id}`
-      );
+      const response = await ax.delete(`${HOST_URL}api/v1/tech_projects/${id}`);
       navigate("/tech");
     } catch (error) {
       console.log(error);

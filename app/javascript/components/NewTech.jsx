@@ -17,16 +17,14 @@ export const NewTech = () => {
 
   const getTechProject = async () => {
     try {
-      let request = await ax.get(
-        `${HOST_URL}api/v1/tech_projects/new`
-      );
+      let request = await ax.get(`${HOST_URL}api/v1/tech_projects/new`);
       let newTechProject = request.data;
       setTechProject({
         title: newTechProject.title,
         youtube_link: newTechProject.youtube_link,
         repo_link: newTechProject.repo_link,
         demo_link: newTechProject.demo_link,
-        description: newTechProject.description
+        description: newTechProject.description,
       });
     } catch (error) {
       if (error.response.status === 401) {
@@ -48,7 +46,7 @@ export const NewTech = () => {
       youtube_link: techProject.youtube_link,
       repo_link: techProject.repo_link,
       demo_link: techProject.demo_link,
-      description: techProject.description
+      description: techProject.description,
     });
   };
 
@@ -58,7 +56,7 @@ export const NewTech = () => {
       youtube_link: e.target.value,
       repo_link: techProject.repo_link,
       demo_link: techProject.demo_link,
-      description: techProject.description
+      description: techProject.description,
     });
   };
 
@@ -68,7 +66,7 @@ export const NewTech = () => {
       youtube_link: techProject.youtube_link,
       repo_link: e.target.value,
       demo_link: techProject.demo_link,
-      description: techProject.description
+      description: techProject.description,
     });
   };
 
@@ -78,7 +76,7 @@ export const NewTech = () => {
       youtube_link: techProject.youtube_link,
       repo_link: techProject.repo_link,
       demo_link: e.target.value,
-      description: techProject.description
+      description: techProject.description,
     });
   };
 

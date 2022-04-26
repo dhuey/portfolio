@@ -1,12 +1,12 @@
-import React from 'react';
-import { useOutletContext } from 'react-router-dom';
+import React from "react";
+import { useOutletContext } from "react-router-dom";
 
-export const AuthComponent = props => {
+export const AuthComponent = (props) => {
   const [loggedInStatus, user] = useOutletContext();
 
   if (loggedInStatus === "LOGGED_IN") {
-    return props.component
+    return props.component;
   } else {
-    return null
+    return null;
   }
-}
+};

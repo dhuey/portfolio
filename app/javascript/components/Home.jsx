@@ -1,15 +1,15 @@
-import React, { useEffect } from 'react';
-import { Link } from 'react-router-dom';
-import { ContentCard } from './ContentCard'
+import React, { useEffect } from "react";
+import { Link } from "react-router-dom";
+import { ContentCard } from "./ContentCard";
 
 export const Home = () => {
   useEffect(() => {
-    document.title = 'dalton huey—creative'
-  })
+    document.title = "dalton huey—creative";
+  });
 
   const scrollDown = () => {
-    const about = document.getElementById('about');
-    about.scrollIntoView({ behavior: 'smooth' });
+    const about = document.getElementById("about");
+    about.scrollIntoView({ behavior: "smooth" });
   };
 
   return (
@@ -48,12 +48,12 @@ export const Home = () => {
           <p className="manifesto-para">
             My name is Dalton Huey. I live in Lawrence, KS with my wife Hannah,
             and I am pretty well convinced that I was made to tell stories and
-            solve problems. And, for better or worse, those
-            inclinations come out in several different ways. One of my first
-            loves was writing, which laid the foundation for music, which roped
-            in a love for video. Along the way, I discovered business and web
-            app development, and I've been thrilled to be able to throw my
-            creative mind at solving real-world problems for everyday people.
+            solve problems. And, for better or worse, those inclinations come
+            out in several different ways. One of my first loves was writing,
+            which laid the foundation for music, which roped in a love for
+            video. Along the way, I discovered business and web app development,
+            and I've been thrilled to be able to throw my creative mind at
+            solving real-world problems for everyday people.
           </p>
 
           <p className="manifesto-para">
@@ -66,19 +66,25 @@ export const Home = () => {
       </div>
 
       <div className="boxed-section text-center">
-        <h2><span className="h1-symbol">&mdash;</span>who you are</h2>
+        <h2>
+          <span className="h1-symbol">&mdash;</span>who you are
+        </h2>
         <p>What are you most interested in?</p>
         <div className="content-card-container">
           <ContentCard cssId="video-content-card" path="video" text="Video" />
-          <ContentCard cssId="tech-content-card" path="tech" text="Web Development" />
+          <ContentCard
+            cssId="tech-content-card"
+            path="tech"
+            text="Web Development"
+          />
         </div>
       </div>
 
       <div className="text-center boxed-section manifesto">
-        <h2><span className="h1-symbol">&mdash;</span>what I believe</h2>
-        <p>
-          I believe in unbridled creativity.
-        </p>
+        <h2>
+          <span className="h1-symbol">&mdash;</span>what I believe
+        </h2>
+        <p>I believe in unbridled creativity.</p>
         <p>
           In this world, there are magnificent stories to be told, just causes
           to champion, and wonderful people to win over.

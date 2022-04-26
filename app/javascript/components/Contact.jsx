@@ -6,7 +6,7 @@ import HOST_URL from "../modules/hostUrl";
 export const Contact = () => {
   useEffect(() => {
     document.title = "Contact — Dalton Huey";
-  }, [])
+  }, []);
   const [formSubmitted, setFormSubmitted] = useState(false);
   const [contact, setContact] = useState({
     name: "",
@@ -41,10 +41,7 @@ export const Contact = () => {
   const sendMessage = async (e) => {
     e.preventDefault();
     try {
-      let request = await ax.post(
-        `${HOST_URL}api/v1/messages`,
-        contact
-      );
+      let request = await ax.post(`${HOST_URL}api/v1/messages`, contact);
       console.log(request);
       if (request.status === 201) {
         setFormSubmitted(true);

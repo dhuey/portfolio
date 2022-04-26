@@ -1,5 +1,5 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
+import React from "react";
+import { Link } from "react-router-dom";
 
 export const BackButton = (props) => {
   return (
@@ -9,5 +9,5 @@ export const BackButton = (props) => {
         Back to {props.backTo}
       </button>
     </Link>
-  )
-}
+  );
+};
