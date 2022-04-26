@@ -24,16 +24,18 @@ export const TechProject = (props) => {
             <EditResourceButton id={props.id} resourceName="Tech Project" />
           }
         />
-        <TechProjectButton
-          link={props.repoLink}
-          text="View it on Github"
-          iconClass="fa-brands fa-github"
-        />
-        <TechProjectButton
-          link={props.demoLink}
-          text="See it in action"
-          iconClass="fa-solid fa-display"
-        />
+        <div className="tech-project-button-container">
+          <TechProjectButton
+            link={props.repoLink}
+            text="View it on Github"
+            iconClass="fa-brands fa-github"
+          />
+          <TechProjectButton
+            link={props.demoLink}
+            text="See it in action"
+            iconClass="fa-solid fa-display"
+          />
+        </div>
       </div>
     </div>
   );

@@ -296,11 +296,17 @@ footer {
   display: inline-block;
 }
 
+.tech-project-button-container {
+  display: flex;
+  justify-content: center;
+}
+
 .tech-project-button {
   text-decoration: none;
   text-align: center;
-  margin: 1.5rem auto;
+  margin: 1.5rem;
   max-width: 300px;
+  display: inline-block;
 }
 
 .tech-project-link {
@@ -511,5 +517,20 @@ footer {
 
   .content-card > a {
     font-size: 18px;
+  }
+
+  .tech-project-button-container {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .tech-project-button {
+    width: 90%;
+    margin: 0.75rem 0rem;
+  }
+
+  .tech-project-link {
+    width:  100%;
   }
 }
